@@ -1,0 +1,37 @@
+{{ block title }}
+Results
+{{ endblock }}
+
+{{ block content }}
+
+
+{{ if player.p3_decision == 'compete' }}
+
+<p>You answered {{ player.score }} questions correctly.</p>
+
+<p>{{ teammate.name }} answered {{ player.p3_teammate_score1 }} questions correctly.</p>
+
+<p>Accordingly, your final score is {{ player.p3_score }} </p>
+
+<p>{{ competitor.name }} answered {{ player.p3_competitor_score }} questions correctly.</p>
+
+{{ endif }}
+
+
+{{ if player.p3_decision == 'pass' }}
+
+<p>{{ teammate.name }} answered {{ player.p3_teammate_score1 }} questions correctly in round 1.</p>
+
+<p>{{ teammate.name }} answered {{ player.p3_teammate_score2 }} questions correctly in round 2.</p>
+
+<p>Accordingly, your final score is {{ player.p3_score }} </p>
+
+<p>{{ competitor.name }} answered {{ player.p3_competitor_score }} questions correctly.</p>
+
+{{ endif }}
+
+{{ include "_outcome.html" }}
+
+{{ next_button }}
+
+{{ endblock }}

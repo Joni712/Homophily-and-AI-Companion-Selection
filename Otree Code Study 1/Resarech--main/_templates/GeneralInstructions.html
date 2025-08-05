@@ -1,0 +1,33 @@
+{{ block title }}
+General Instructions
+{{ endblock }}
+
+{{ block content }}
+
+<p>Thank you for participating in this study.</p>
+
+<p>
+    In this following study you will be asked to participate in several competitive matches. The competition in these matches will include solving math questions quickly and accurately. These questions are from the Armed Services Vocational Aptitude Battery (ASVAB). 
+    Each question will test your aptitude in Arithmetic Reasoning. In addition to being used by the military to determine which jobs armed service members are qualified for, performance on the ASVAB is often used as a measure of cognitive ability by academic researchers.
+    You will be asked to solve as many such math questions as possible within 150 seconds.
+</p>
+
+{{ if participant.mode == 'humans' }}
+<p>
+    You will first get a chance to familiarize yourself with the type of questions in this study in a practice round.  After that, you will proceed to compete against other Prolific participants in solving similar questions quickly and acuratly.
+    In addition to your show-up fee, for each round that you win, you will receive an additional $1. If you tie, you will split the reward money and will receive $0.5.
+</p>
+{{ else }}
+<p>
+    You will first get a chance to familiarize yourself with the type of questions in this study in a practice round. After that, you will proceed to compete against bots (i.e. enabled
+    virtual agents) in solving similar questions quickly and acuratly. 
+    In addition to your show-up fee, for each round that you win, you will receive an additional $1. If you tie, you will split the reward money and will receive $0.5.
+</p>
+{{ endif }}
+
+
+<p>Let’s start with a practice round so that you can familiarize yourself with the type of questions you will be asked to solve in this study.</p>
+
+{{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,90 @@
+html,
+body,
+.otree-body,
+form {
+    height: 100%;
+}
+
+.otree-body {
+    position: relative;
+}
+
+.otree-body>h2 {
+    display: none;
+}
+
+.otree-timer {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+}
+
+._otree-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.overlay.left-side {
+    right: 50%;
+}
+
+.overlay.right-side {
+    left: 50%;
+}
+
+.bottom {
+    height: 25vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+input.form-control {
+    max-width: none;
+}
+
+
+.flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-flow: column nowrap;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-flow: row nowrap;
+}
+
+.center {
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.main {
+    flex: 1 1 100%;
+}

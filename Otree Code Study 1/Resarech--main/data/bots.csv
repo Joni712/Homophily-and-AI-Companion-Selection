@@ -1,0 +1,42 @@
+id,section,gender,race,name
+1,part 1,M,W,auto
+2,part 1,M,B,auto
+3,part 1,M,W,auto
+4,part 1,M,B,auto
+5,part 1,F,W,auto
+6,part 1,F,B,auto
+7,part 1,F,W,auto
+8,part 1,F,B,auto
+9,part 1,F,W,auto
+10,part 1,F,B,auto
+11,part 1,M,B,auto
+12,part 1,M,W,auto
+13,part 2,M,W,auto
+14,part 2,M,B,auto
+15,part 2,F,W,auto
+16,part 2,F,B,auto
+17,part 2,M,W,auto
+18,part 2,M,B,auto
+19,part 2,F,W,auto
+20,part 2,F,B,auto
+21,part 2,M,W,auto
+22,part 2,M,B,auto
+23,part 2,F,W,auto
+24,part 2,F,B,auto
+25,part 3,M,W,David
+26,part 3,M,W,Michael
+27,part 3,F,W,Elizabeth
+28,avatar,M,W,
+29,avatar,M,B,
+30,avatar,M,W,
+31,avatar,M,B,
+32,avatar,M,W,
+33,avatar,M,B,
+34,avatar,F,W,
+35,avatar,F,B,
+36,avatar,F,W,
+37,avatar,F,B,
+38,avatar,F,W,
+39,avatar,F,B,
+
+

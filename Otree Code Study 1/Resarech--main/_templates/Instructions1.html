@@ -1,0 +1,27 @@
+{{ block title }}
+Instructions
+{{ endblock }}
+
+{{ block content }}
+
+{{ if participant.mode == 'humans' }}
+<p>
+    You will now be asked to choose another Prolific participant against whom you would like to compete. 
+    The competition will involve correctly solving as many math questions as possible within 150 seconds. 
+    If you solve more questions than your competitor, you win. 
+    If your competitor solves more questions than you, you lose. 
+    If both you and your competitor solve the same number of questions, you tie.
+</p>
+{{ else }}
+<p>
+    You will now be asked to choose a bot against whom you would like to compete. 
+    The competition will involve correctly solving as many math questions as possible within 150 seconds. 
+    If you solve more questions than your bot competitor, you win. 
+    If your bot competitor solves more questions than you, you lose. 
+    If both you and your bot competitor solve the same number of questions, you tie.
+</p>
+{{ endif }}
+
+<button class="otree-btn-next btn btn-primary">Continue</button>
+
+{{ endblock }}

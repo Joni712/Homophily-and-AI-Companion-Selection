@@ -1,0 +1,35 @@
+{{ block title }}
+Instructions
+{{ endblock }}
+
+{{ block content }}
+
+{{ if participant.mode == 'humans' }}
+<p>
+    The following round is a team challenge. 
+    You will be asked to choose another Prolific participant whom you would like to be on your team.
+    After that, you and your teammate will both compete against a different participant. 
+</p>
+
+<p>
+    Your final score will be an average of your score and that of your teammate. 
+    For example, if you get a score of 4, and your teammate gets a score of 2, your final score will be 3. 
+    If both you and your teammate score 5, your final score will be 5 etc. 
+</p>
+{{ else }}
+<p>
+    The following round is a team challenge. 
+    You will be asked to choose one bot whom you would like to be on your team.
+    After that, you and your bot teammate will both compete against a different bot. 
+</p>
+
+<p>
+    Your final score will be an average of your score and that of your teammate. 
+    For example, if you get a score of 4, and your bot teammate gets a score of 2, your final score will be 3. 
+    If both you and your bot teammate score 5, your final score will be 5 etc. 
+</p>
+{{ endif }}
+
+<button class="otree-btn-next btn btn-primary">Continue</button>
+
+{{ endblock }}

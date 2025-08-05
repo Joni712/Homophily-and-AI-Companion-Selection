@@ -1,0 +1,17 @@
+{{ block title }}
+Attention Check
+{{ endblock }}
+
+{{ block content }}
+
+
+{{ if participant.mode == 'humans' }}
+<p>In this study, you competed against other Prolific participants: </p>
+{{ else }}
+<p>In this study, you competed against bots: </p>
+{{ endif }}
+
+<button name="attention" value="true" class="btn btn-primary">True</button>
+<button name="attention" value="false" class="btn btn-primary">False</button>
+
+{{ endblock }}

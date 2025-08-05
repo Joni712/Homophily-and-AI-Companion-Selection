@@ -1,0 +1,56 @@
+button.btn {
+    margin: 16px;
+    /* z-1 */
+    box-shadow:
+        0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+button.btn:hover {
+    /* 6z */
+    box-shadow:
+        0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.28),
+        0px 2px 1px -1px rgba(0, 0, 0, 0.24);
+}
+
+.avatar {
+    position: relative;
+    background: #ecf0f1;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 4px;
+    margin: 8px;
+}
+
+.avatar img {
+    display: block;
+    width: 120px;
+    height: 120 px;
+    border-radius: 4px;
+}
+
+.avater label {
+    text-align: center;
+}
+
+.bots {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+progress {
+    width: 100%;
+}
+
+.party {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    padding: 16px;
+}

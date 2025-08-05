@@ -1,0 +1,4 @@
+-r requirements.txt
+flake8
+black==21.12b0
+# requests~=2.0

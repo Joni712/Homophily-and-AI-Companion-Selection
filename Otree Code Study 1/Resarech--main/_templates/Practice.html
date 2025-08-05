@@ -1,0 +1,19 @@
+{{ block styles }}
+<link href="{{ static 'main.css' }}" rel="stylesheet" />
+{{ endblock }}
+
+
+{{ block title }}
+Practice
+{{ endblock }}
+
+{{ block content }}
+
+<p>{{ task.question }}</p>
+
+<button class="btn btn-primary">{{task.options.0.label}}</button>
+<button class="btn btn-primary">{{task.options.1.label}}</button>
+<button class="btn btn-primary">{{task.options.2.label}}</button>
+<button class="btn btn-primary">{{task.options.3.label}}</button>
+
+{{ endblock }}

@@ -1,0 +1,15 @@
+{{ block title }}
+Results
+{{ endblock }}
+
+{{ block content }}
+
+<p>You answered {{ player.score }} questions correctly.</p>
+
+<p>Your competitor answered {{ player.p1_competitor_score }} questions correctly.</p>
+
+{{ include "_outcome.html" }}
+
+{{ next_button }}
+
+{{ endblock }}

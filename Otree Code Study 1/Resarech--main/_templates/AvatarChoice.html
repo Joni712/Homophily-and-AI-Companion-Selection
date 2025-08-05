@@ -1,0 +1,13 @@
+{{ block styles }}
+<link href="{{ static 'main.css' }}" rel="stylesheet" />
+{{ endblock }}
+
+{{ block content }}
+
+<p>An avatar is a visual representation of yourself in the experiment, similar to a profile picture.</p>
+
+<p>Please, choose one image that you feel best represents you.</p>
+
+{{ include "_bots_selection.html" }}
+
+{{ endblock }}

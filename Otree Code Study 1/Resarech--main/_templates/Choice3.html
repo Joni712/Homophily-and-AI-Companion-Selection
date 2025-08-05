@@ -1,0 +1,36 @@
+{{ block styles }}
+<link href="{{ static 'main.css' }}" rel="stylesheet" />
+{{ endblock }}
+
+{{ block content }}
+
+{{ include "_bots_party.html" }}
+
+<p>Your competitor is {{ competitor.name }} </p>
+
+<p>You are now asked to choose between two options</p>
+
+
+<p>
+    <strong>Option 1: Proceed to compete alongside {{ teammate.name }}.</strong>
+    In this case your final score will be an average of your score and {{ teammate.name }}'s score.
+    So, for example, if you get a score of 4, and {{ teammate.name }} gets a score of 2 your final score will be 3.
+    If both you and {{ teammate.name }} get 5 your final score will be 5 etc.
+</p>
+
+<p>
+    <strong>Option 2: Don’t compete and instead let {{ teammate.name }} compete in your place.</strong> 
+    In this case, {{ teammate.name }} will compete twice.
+    Your final score will be an average of both of {{ teammate.name }}’s scores.
+    So, for example, If {{ teammate.name }} scores 2 and 4, your final score will be 3.
+    If {{ teammate.name }} scores 5 and 5 your final score will be 5 etc.
+</p>
+
+<p>What is your Choice?</p>
+
+<button class="btn btn-primary" name="p3_decision" value="compete">Proceed to compete</button>
+
+<button class="btn btn-primary" name="p3_decision" value="pass">Let {{ teammate.name }} compete in your place</button>
+
+
+{{ endblock }}

@@ -1,0 +1,21 @@
+{{ block title }}
+Instructions
+{{ endblock }}
+
+{{ block content }}
+
+{{ if participant.mode == 'humans' }}
+<p>
+    In this round, a participant named David is on your team. 
+    Your team is going to compete against a different participant in a competition that will involve correctly solving as many math questions as possible within 150 seconds. 
+</p>
+{{ else }}
+<p>
+    In this round, a bot named David is on your team. 
+    Your team is going to compete against another bot in a competition that will involve correctly solving as many math questions as possible within 150 seconds. 
+</p>
+{{ endif }}
+
+<button class="otree-btn-next btn btn-primary">Continue</button>
+
+{{ endblock }}

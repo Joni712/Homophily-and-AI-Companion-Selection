@@ -1,0 +1,68 @@
+{{ block styles }}
+<link href="{{ static 'main.css' }}" rel="stylesheet" />
+{{ endblock }}
+
+
+{{ block title }}
+Match
+{{ endblock }}
+
+{{ block content }}
+
+{{ include "_bots_party.html" }}
+
+<h3 ot-text="iteration"></h3>
+
+<p ot-text="task.question"></p>
+
+<button type="button" class="btn btn-primary" ot-input="answer = 0" ot-text="task.options.0.label"></button>
+<button type="button" class="btn btn-primary" ot-input="answer = 1" ot-text="task.options.1.label"></button>
+<button type="button" class="btn btn-primary" ot-input="answer = 2" ot-text="task.options.2.label"></button>
+<button type="button" class="btn btn-primary" ot-input="answer = 3" ot-text="task.options.3.label"></button>
+
+<input type="hidden" name="answers" ot-attr-value="answers">
+
+{{ block scripts }}
+<script src="{{ static 'otree-front-1.2.b3.js' }}"></script>
+<script>
+    const TASKS = js_vars.tasks;
+    const NUM_TASKS = TASKS.length;
+    const TRIAL_DELAY = 100;
+
+    ot.onLoad(function () {
+        ot.page.iteration = 0;
+        ot.page.answers = "";
+        ot.startIteration();
+    });
+
+    ot.onIteration(function () {
+        if (ot.page.iteration == NUM_TASKS) {
+            ot.completePage();
+        } else {
+            ot.page.iteration += 1;
+            ot.startTrial(TASKS[ot.page.iteration - 1]);
+        }
+    });
+
+    ot.onTrial(function (task) {
+        ot.page.task = task;
+        ot.resetInputs();
+    });
+
+    ot.onInput('answer', function (option) {
+        ot.freezeInputs();
+        ot.page.answers += ot.page.task.options[option].value;
+        ot.completeTrial({});
+    });
+
+    ot.onComplete(function () {
+        ot.delay(TRIAL_DELAY, function() {
+            ot.startIteration()
+        });
+    });
+</script>
+{{ endblock }}
+
+
+
+{{ endblock }}

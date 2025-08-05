@@ -1,0 +1,16 @@
+<div class="party">
+    {{ if competitor }}
+    <h4>Your competitor:</h4>
+    <div class="avatar">
+        <img src="{{ static competitor.imagepath }}">
+        <label>{{ competitor.name }}</label>
+    </div>
+    {{ endif }}
+    {{ if teammate }}
+    <h4>Your teammate:</h4>
+    <div class="avatar">
+        <img src="{{ static teammate.imagepath }}">
+        <label>{{ teammate.name }}</label>
+    </div>
+    {{ endif }}
+</div>

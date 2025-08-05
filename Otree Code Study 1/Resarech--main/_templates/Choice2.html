@@ -1,0 +1,22 @@
+{{ block styles }}
+<link href="{{ static 'main.css' }}" rel="stylesheet" />
+{{ endblock }}
+
+{{ block content }}
+
+{{ if participant.mode == 'humans' }}
+<p>
+    Please choose one of the following Prolific participants as your teammate for an upcoming round of competition. 
+    You will then jointly compete as a team against an unknown participant.
+</p>
+{{ else }}
+<p>
+    Please choose one of the following bots as your teammate for an upcoming round of competition. 
+    You will then jointly compete as a team against an unknown bot.
+</p>
+{{ endif }}
+
+{{ include "_bots_selection.html" }}
+
+
+{{ endblock }}

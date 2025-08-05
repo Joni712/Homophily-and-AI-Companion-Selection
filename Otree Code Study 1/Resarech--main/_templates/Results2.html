@@ -1,0 +1,19 @@
+{{ block title }}
+Results
+{{ endblock }}
+
+{{ block content }}
+
+<p>You answered {{ player.score }} questions correctly.</p>
+
+<p>Your teammate answered {{ player.p2_teammate_score }} questions correctly.</p>
+
+<p>Accordingly, your final score is {{ player.p2_score }} </p>
+
+<p>Your competitor answered {{ player.p2_competitor_score }} questions correctly.</p>
+
+{{ include "_outcome.html" }}
+
+{{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,8 @@
+<div class="bots">
+    {{ for bot in bots }}
+    <button class="btn avatar" name="{{bot_field}}" value="{{bot}}">
+        <img src="{{ static bot.imagepath }}">
+        <label>{{bot.name}}</label>
+    </button>
+    {{ endfor }}
+</div>
